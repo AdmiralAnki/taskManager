@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: taskManager
+
+  # Database Configuration - tells Spring how to connect to PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/taskmanager_db
+    username: tmuser
+    password: tmuser_password
+    driver-class-name: org.postgresql.Driver
+
+  # JPA/Hibernate Configuration - controls how Hibernate manages your database
+  jpa:
+    hibernate:
+      # Automatically creates/updates tables based on your Java entities
+      ddl-auto: update
+    # Shows SQL queries in console (great for learning!)
+    show-sql: true
+    properties:
+      hibernate:
+        # Generates PostgreSQL-specific SQL
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # Makes SQL queries pretty-printed in console
+        format_sql: true
+
+# Logging configuration (optional but helpful)
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
