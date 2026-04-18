@@ -35,8 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-### Documentation ###
-THYMELEAF_UI_GUIDE.md
-THYMELEAF_QUICK_REFERENCE.md
-PROJECT_MEMORY.md
